@@ -7,10 +7,10 @@ struct student{
 void sort_arival(){
 	struct student a;
 	int min,pos;
-	for(int i=0;i<10;i++){
+	for(int i=0;i<n;i++){
 		min = s[i].arrt;
 		pos = i;	
-		for(int j=i+1;j<10;j++){
+		for(int j=i+1;j<n;j++){
 			if(min>s[j].arrt){
 				min = s[j].arrt;
 				pos = j;
@@ -24,7 +24,11 @@ void sort_arival(){
 	}
 }
 int main(){
-	for(int i=0;i<10;i++){
+	int n;
+	printf("Enter the no.of students:");
+	scanf("%d",&n);
+	struct student s[n];
+	for(int i=0;i<n;i++){
 		s[i].id=i+1;
 		printf("\nEnter the arrival time for s%d: ",i+1);
 		scanf("%d",&s[i].arrt);
@@ -35,11 +39,10 @@ int main(){
 	sort_arival();
 	struct student m;
 	int pos;
-	
-	for(int i=0;i<10;i++){
+	for(int i=0;i<n;i++){
 		m = s[i];
 		pos = i;
-		for(int j=i+1;j<10;j++){
+		for(int j=i+1;j<n;j++){
 			if(m.no_of_gift<s[j].no_of_gift){
 				m = s[j];
 				pos = j;
