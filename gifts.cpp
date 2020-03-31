@@ -4,7 +4,7 @@ struct student{
 	int arrt;
 	int id;
 }s[10];
-void sort_arival(int n){
+void sort_arival(){
 	struct student a;
 	int min,pos;
 	for(int i=0;i<n;i++){
@@ -24,10 +24,6 @@ void sort_arival(int n){
 	}
 }
 int main(){
-	int n;
-	printf("Enter the no.of students:");
-	scanf("%d",&n);
-	struct student s[n];
 	for(int i=0;i<n;i++){
 		s[i].id=i+1;
 		printf("\nEnter the arrival time for s%d: ",i+1);
