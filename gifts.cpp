@@ -1,20 +1,18 @@
 #include<stdio.h>
-
 struct student{
 	int no_of_gift;
-	int at;
+	int arrt;
 	int id;
 }s[10];
-
 void sort_arival(){
 	struct student a;
 	int min,pos;
 	for(int i=0;i<10;i++){
-		min = s[i].at;
+		min = s[i].arrt;
 		pos = i;	
 		for(int j=i+1;j<10;j++){
-			if(min>s[j].at){
-				min = s[j].at;
+			if(min>s[j].arrt){
+				min = s[j].arrt;
 				pos = j;
 			}
 		}
@@ -29,7 +27,7 @@ int main(){
 	for(int i=0;i<10;i++){
 		s[i].id=i+1;
 		printf("\nEnter the arrival time for s%d: ",i+1);
-		scanf("%d",&s[i].at);
+		scanf("%d",&s[i].arrt);
 		printf("\nEnter the number of gift items for s%d: ",i+1);
 		scanf("%d",&s[i].no_of_gift);
 	}
