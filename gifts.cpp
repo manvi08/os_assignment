@@ -1,3 +1,4 @@
+//steps which are commented can be used if the program needs to be executed for n no.of students 
 #include<stdio.h>
 struct student{
 	int no_of_gift;
