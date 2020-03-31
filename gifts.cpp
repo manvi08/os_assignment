@@ -4,7 +4,7 @@ struct student{
 	int arrt;
 	int id;
 }s[10];
-void sort_arival(){
+void sort_arival(int n){
 	struct student a;
 	int min,pos;
 	for(int i=0;i<n;i++){
@@ -36,7 +36,7 @@ int main(){
 		scanf("%d",&s[i].no_of_gift);
 	}
 	
-	sort_arival();
+	sort_arival(n);
 	struct student m;
 	int pos;
 	for(int i=0;i<n;i++){
