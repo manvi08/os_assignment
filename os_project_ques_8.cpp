@@ -91,3 +91,30 @@ void roundrobin(string p[],int a[],int b[],int tqn,int n)
 			break;
 		}
 	}
+	 cout<<"name  ctime  wtime"<<endl; 
+     for (int i = 0;i<n;i++) 
+	 { 
+            cout<<" "<<p[i]<<"    "<<comp[i]<<"    "<<w[i];
+            res = res + w[i]; 
+            resc = resc + comp[i]; 
+    } 
+    cout<<"Average waiting time is "<<(float)res/n<<endl; 
+    cout<<"Average compilation  time is "<<(float)resc/n<<endl; 
+    cout<<"Sequence is like that "<<seq<<endl; 
+}
+int main()
+{
+	int n;
+	cout<<"Enter no.of processes: "<<endl;
+	cin>>n;
+	string proc[n];
+	int arrt[n],brst[n],tq;
+	cout<<"Enter the time quantum: "<<endl;
+	cin>>tq;
+	cout<<"Enter name, arrival time and burst time of all processes"<<endl;
+	for(int i=0;i<n;i++)
+	{
+		cin>>proc[i]>>arrt[i]>>brst[i];
+	}
+	roundrobin(proc,arrt,brst,tq,n);
+}
