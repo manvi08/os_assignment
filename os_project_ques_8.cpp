@@ -39,3 +39,23 @@ void roundrobin(string p[],int a[],int b[],int tqn,int n)
 						    seq+="->"+p[i];	
 						}
 					}
+					}else if(ra[i]>tqn){
+					for(int j=0;j<n;j++)
+					{
+						if(ra[j]>ra[i]){
+							if(rb[j]>0)
+							{
+								flag=false;
+								if(rb[j]>tqn)
+								{
+									t=t+tqn;
+									rb[j]=rb[j]-tqn;
+									ra[j]=ra[j]+tqn;
+									seq+="->"+p[j];
+								}else{
+									t=t+rb[j];
+									comp[j]=t-a[j];
+									w[j]=t-b[j]-a[j];
+									rb[j]=0;
+									seq+="->"+p[j];
+								}
