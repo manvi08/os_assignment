@@ -80,3 +80,14 @@ void roundrobin(string p[],int a[],int b[],int tqn,int n)
 						seq+="->"+p[i];
 					}
 				 }	
+	
+				}
+			}else if(ra[i]>t){
+				t++;
+				i--;
+			}
+		}
+		if(flag){
+			break;
+		}
+	}
